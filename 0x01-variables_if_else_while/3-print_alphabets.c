@@ -18,8 +18,9 @@ int main(void)
 		if (ch == 122)
 	
 		{
-		ch = 64;
-		lch = 90;
+	
+			ch = 64;	
+			lch = 90;
                 }
 	}
 	printf("\n");
