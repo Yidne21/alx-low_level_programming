@@ -5,3 +5,4 @@
  * it doesn't have return value it is just a header file
  */
 int _isupper(int c);
+int _isdigit(int c);
