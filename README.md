@@ -1,1 +1,1 @@
-This is a project on understanding c language from ALX - Software engineering school
+This is an ALX project on c to understand c-pointers, arrays and strings

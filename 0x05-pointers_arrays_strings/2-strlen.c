@@ -5,9 +5,9 @@
  *
  * Return: The length of @str.
  */
-size_t _strlen(const char *str)
+int _strlen(char *str)
 {
-	size_t lengh = 0;
+	size_t length = 0;
 
 	while (*str++)
 		length++;
