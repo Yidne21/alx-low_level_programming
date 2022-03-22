@@ -8,7 +8,7 @@ int _atoi(char *s)
 {
 	unsigned int cnt = 0, size = 0, oi = 0, pn = 1, m = 1, i;
 
-	while(*(s + cnt) != '\0')
+	while (*(s + cnt) != '\0')
 	{
 		if (size > 0 && (*(s + cnt) < '0' || *(s + cnt) > '9'))
 			break;
