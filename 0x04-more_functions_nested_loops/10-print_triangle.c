@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_triangle - prints a triangle with height equals to size
- * @size:is an integer and is the height of the triangle 
+ * @size:is an integer and is the height of the triangle
  *
  * Return: Always 0
  */
