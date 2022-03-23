@@ -27,13 +27,13 @@ char *rot13(char *str)
 			     'd', 'e', 'f', 'g', 'h', 'i',
 			     'j', 'k', 'l', 'm'};
 
-	while (str[i])
+	while (*(str + i) != '\n')
 	{
 		for (j = 0; j < 52; j++)
 		{
-			if (str[i] == alphabet[j])
+			if (*(str + i) == alphabet[j])
 			{
-				str[i] = rot13key[j];
+				*(str + i) = rot13key[j];
 				break;
 			}
 		}
