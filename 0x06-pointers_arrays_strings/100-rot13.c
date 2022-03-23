@@ -27,7 +27,7 @@ char *rot13(char *str)
 			     'd', 'e', 'f', 'g', 'h', 'i',
 			     'j', 'k', 'l', 'm'};
 
-	while (*(str + i) != '\n')
+	while (*(str + i) != '\0')
 	{
 		for (j = 0; j < 52; j++)
 		{
