@@ -7,42 +7,32 @@
  */
 void print_times_table(int n)
 {
-	int row = 0, column, product;
+	int row = 0, col, pro;
 
 	if (n >= 0 && n < 15)
 	{
 		while (row <= n)
 		{
-			for (column = 0; column <= n; column++)
+			_putchar('0');
+			for (col = 1; col <= n; col++)
 			{
-				product = row * column;
-
-				if (column == 0)
-					_putchar('0');
-				else if (product < 10)
+				_putchar(',');
+				_putchar(' ');
+				pro = row * col;
+				if (pro <= 99)
+					_putchar(' ');
+				if (pro <= 9)
+					_putchar(' ');
+				if (pro >= 100)
 				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(product % 10 + '0');
+					_putchar((pro / 100) + '0');
+					_putchar(((pro / 10)) % 10 + '0');
 				}
-				else if (product >= 10 && product < 100)
+				else if (pro <= 99 && pro >= 10)
 				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((product / 10) % 10 + '0');
-					_putchar(product % 10 + '0');
+					_putchar((pro / 10) + '0');
 				}
-				else if (product > 99 && product < 1000)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(product / 100 + '0');
-					_putchar((product / 10) % 10 + '0');
-					_putchar(product % 10 + '0');
-				}
+				_putchar((pro % 10) + '0');
 			}
 			_putchar('\n');
 			row++;
