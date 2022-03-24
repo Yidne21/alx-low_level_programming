@@ -6,18 +6,18 @@
  */
 int main(void)
 {
-	unsigned int i = 3, j, k, next;
+	unsigned long int i = 3, j, k, next;
 
 	j = 1;
 	k = 2;
 	next = j + k;
-	printf("%u, %u, ", j, k);
+	printf("%lu, %lu, ", j, k);
 	while (i <= 98)
 	{
 		if (i == 98)
-			printf("%u\n", next);
+			printf("%lu\n", next);
 		else
-			printf("%u, ", next);
+			printf("%lu, ", next);
 		j = k;
 		k = next;
 		next = j + k;
