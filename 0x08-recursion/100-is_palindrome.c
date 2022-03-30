@@ -1,26 +1,62 @@
 #include "main.h"
+
+int find_strlen(char *s);
+int check_palindrome(char *s, int len, int index);
+int is_palindrome(char *s);
+
 /**
- * is_palindrome - checks a string is palindrome or not.
- * @s: is a string to be checked.
+ * find_strlen - Returns the length of a string.
+ * @s: The string to be measured.
  *
- * Return: 1 if a string is a palindrome and 0 if not.
+ * Return: The length of the string.
+ */
+int find_strlen(char *s)
+{
+	int len = 0;
+
+	if (*(s + len))
+	{
+		len++;
+		len += find_strlen(s + len);
+	}
+
+	return (len);
+}
+
+/**
+ * check_palindrome - Checks if a string is a palindrome.
+ * @s: The string to be checked.
+ * @len: The length of s.
+ * @index: The index of the string to be checked.
+ *
+ * Return: If the string is a palindrome - 1.
+ *         If the string is not a palindrome - 0.
+ */
+int check_palindrome(char *s, int len, int index)
+{
+	if (s[index] == s[len / 2])
+		return (1);
+
+	if (s[index] == s[len - index - 1])
+		return (check_palindrome(s, len, index + 1));
+
+	return (0);
+}
+
+/**
+ * is_palindrome - Checks if a string is a palindrome.
+ * @s: The string to be checked.
+ *
+ * Return: If the string is a palindrome - 1.
+ *         If the string is not a palindrome - 0.
  */
 int is_palindrome(char *s)
 {
-	int len = 0;
-	int h;
-	int i = 0;
+	int index = 0;
+	int len = find_strlen(s);
 
-	while (s[i++] != '\0')
-		len++;
-	h = len -1;
-	i = 0;
-	while (h > 1)
-	{
-		if (s[i++] != s[h--])
-		{
-			return (0);
-		}
-	}
-	return (1);
+	if (!(*s))
+		return (1);
+
+	return (check_palindrome(s, len, index));
 }
