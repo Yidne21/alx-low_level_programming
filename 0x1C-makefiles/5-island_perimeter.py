@@ -3,6 +3,8 @@
 
 
 def island_perimeter(grid):
+    """calulate the perimeter of the island"""
+
     width = len(grid[0])
     height = len(grid)
     edges = 0
