@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# run the whoami by accepting anrgument which is the user
-sudo -u "$1" whoami
